@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,49 +20,57 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HH2-YB-JGE">
-                                <rect key="frame" x="16" y="40" width="343" height="58.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HH2-YB-JGE">
+                                <rect key="frame" x="20" y="39.999999999999993" width="374" height="58.333333333333321"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-gA-C14">
-                                        <rect key="frame" x="128.5" y="0.0" width="86.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-gA-C14">
+                                        <rect key="frame" x="144" y="0.0" width="86.333333333333343" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2x-9X-sEQ">
-                                        <rect key="frame" x="107" y="28.5" width="129" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2x-9X-sEQ">
+                                        <rect key="frame" x="0.0" y="28.333333333333329" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="m2x-9X-sEQ" secondAttribute="trailing" id="7NN-g7-FV4"/>
+                                    <constraint firstItem="m2x-9X-sEQ" firstAttribute="leading" secondItem="HH2-YB-JGE" secondAttribute="leading" id="Hzy-gC-cLV"/>
+                                </constraints>
                             </stackView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="8MG-vo-vzl">
-                                <rect key="frame" x="86" y="127" width="220" height="220"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="8MG-vo-vzl">
+                                <rect key="frame" x="20" y="148.33333333333337" width="374" height="374"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="8MG-vo-vzl" secondAttribute="height" multiplier="1:1" constant="3" id="Kt6-A3-tqg"/>
+                                    <constraint firstAttribute="width" secondItem="8MG-vo-vzl" secondAttribute="height" multiplier="1:1" id="B6P-9N-Kqm"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="kn6-om-eIk" appends="YES" id="bOD-8D-XlS"/>
                                 </connections>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YnQ-Jo-xcy" customClass="RatingControl" customModule="CustomViewExcercise" customModuleProvider="target">
-                                <rect key="frame" x="50" y="403" width="275" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iS1-d9-63J" customClass="RatingControl" customModule="CustomViewExcercise" customModuleProvider="target">
+                                <rect key="frame" x="92" y="556" width="220" height="44"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="iS1-d9-63J" secondAttribute="trailing" constant="72" id="5JV-wQ-5PG"/>
+                            <constraint firstItem="HH2-YB-JGE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HyT-o3-b7b"/>
+                            <constraint firstItem="8MG-vo-vzl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Kv4-Ys-kyk"/>
+                            <constraint firstItem="8MG-vo-vzl" firstAttribute="top" secondItem="HH2-YB-JGE" secondAttribute="bottom" constant="7.5" id="Owd-UP-lJX"/>
                             <constraint firstItem="HH2-YB-JGE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZNC-b9-cHr"/>
+                            <constraint firstItem="8MG-vo-vzl" firstAttribute="top" secondItem="HH2-YB-JGE" secondAttribute="bottom" constant="50" id="am7-g6-kMX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8MG-vo-vzl" secondAttribute="trailing" id="bGx-oa-CGj"/>
+                            <constraint firstItem="iS1-d9-63J" firstAttribute="top" secondItem="8MG-vo-vzl" secondAttribute="bottom" constant="33.670000000000002" id="jK9-d0-cHn"/>
+                            <constraint firstItem="HH2-YB-JGE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="nyn-ZT-DEh"/>
+                            <constraint firstItem="HH2-YB-JGE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rHG-bh-vJI"/>
+                            <constraint firstItem="iS1-d9-63J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="s0l-sX-uNe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HH2-YB-JGE" secondAttribute="trailing" id="udG-m0-dlc"/>
                         </constraints>
                     </view>
@@ -70,7 +78,7 @@
                         <outlet property="mealNameLabel" destination="QBN-gA-C14" id="rx6-xf-Axw"/>
                         <outlet property="nameTextField" destination="m2x-9X-sEQ" id="Eyi-uu-9Ms"/>
                         <outlet property="photoImageView" destination="8MG-vo-vzl" id="nw5-h1-TmI"/>
-                        <outlet property="ratingControl" destination="YnQ-Jo-xcy" id="tqu-Cj-74M"/>
+                        <outlet property="ratingControl" destination="iS1-d9-63J" id="BpM-Q7-UTv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,7 +88,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
+            <point key="canvasLocation" x="24.637681159420293" y="34.239130434782609"/>
         </scene>
     </scenes>
     <resources>
